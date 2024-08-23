@@ -1,0 +1,124 @@
+body {
+    background-color: #E7F2F7;
+    font-family: "Hind Madurai", sans-serif;
+
+}
+.text_container{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 10%;
+}
+h1{
+    text-align: center;
+    color: #297194;
+    text-decoration: underline;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0;
+} 
+p{
+    color: #757575;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 10px 0;
+}
+.container {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.form {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.tasks .task:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    flex: 1;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.add {
+    border: none;
+    background-color: #297194;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.add:hover {
+    opacity: 0.9;
+}
+
+.add:active {
+    opacity: 0.5;
+}
+
+.tasks {
+    background-color: #81898c;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.tasks .task {
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.tasks .task:hover {
+    background-color: #f7f7f7;
+}
+
+.tasks .task.done {
+    text-decoration: line-through;
+}
+
+.tasks .task span {
+    font-weight: bold;
+    font-size: 10px;
+    background-color: #297194;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media(max-width:600px){
+    .form {
+        font-size: 40px;
+
+    }
+    .container {
+        width: 100%;
+        margin: 10px auto;
+        padding: 0 8%;
+    }
+    .add {
+        padding: 3%;
+        border-radius: 6px;
+        margin-left: 7px;
+    }
+    
+}

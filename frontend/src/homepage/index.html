@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style_home.css" />
+    <title>MindBridge</title>
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">MIND BRIDGE</a>
+      <ul class="navList">
+        <li><a href="#home_Section">Home</a></li>
+        <li><a href="#About_section">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#Option">Select your problem </a></li>
+        <li><a href="#Comment">Comments</a></li>
+        <li><a href="../login/login.html">Login</a></li>
+      </ul>
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    <main>
+      <section id="home_Section">
+        <div class="home">
+          <h2 class="sup_title">Mind Bridge</h2>
+          <h1 class="title">
+            <span class="uniq_title">A Comprehensive </span> Mental Health
+            Support Platform
+          </h1>
+          <p class="description">
+            Analyze, Define, Suggest, and Chat—your comprehensive guide to
+            ensuring the best outcomes for your mental health by addressing all
+            aspects of your well-being, tailored to your unique needs and
+            experiences
+          </p>
+          <a href="../todolist/todolist.html" class="btn"> Go to do list</a>
+        </div>
+        <img src="../../img/Hero.png" alt="" class="image" />
+      </section>
+      <section id="About_section">
+        <h1>Mental health</h1>
+        <div class="container_about">
+          <div class="conceptsText">
+            <h2>About Mental health</h2>
+            <p>
+              Mental health includes our emotional, psychological, and social
+              well-being. It affects how we think, feel, and act. It also helps
+              determine how we handle stress, relate to others, and make healthy
+              choices. Mental health is important at every stage of life, from
+              childhood and adolescence through adulthood.
+            </p>
+            <h2>Concepts in mental health</h2>
+            <p>
+              Throughout our lives, multiple individual, social and structural
+              determinants may combine to protect or undermine our mental health
+              and shift our position on the mental health continuum.
+            </p>
+            <p>
+              Individual psychological and biological factors such as emotional
+              skills, substance use and genetics can make people more vulnerable
+              to mental health problems.
+            </p>
+            <p>
+              Exposure to unfavorable social, economic, geopolitical and
+              environmental circumstances - including poverty, violence,
+              inequality and environmental deprivation - also increases people's
+              risk of experiencing mental health conditions.
+            </p>
+            <p>
+              Risks can manifest themselves at all stages of life, but those
+              that occur during developmentally sensitive periods, especially
+              early childhood, are particularly detrimental. For example, harsh
+              parenting and physical punishment is known to undermine child
+              health and bullying is a leading risk factor for mental health
+              conditions.
+            </p>
+            <p>
+              Mental health risks and protective factors can be found in society
+              at different scales. Local threats heighten risk for individuals,
+              families and communities. Global threats heighten risk for whole
+              populations and include economic downturns, disease outbreaks,
+              humanitarian emergencies and forced displacement and the growing
+              climate crisis.
+            </p>
+            <a
+              target="_blank"
+              href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response/?gad_source=1&gclid=Cj0KCQjwtsy1BhD7ARIsAHOi4xZ1SbFsOBzeHSfreiuUQBO7wAWerM5JnXBIUqM1bnaHr6ltAQ-_PYkaAjO7EALw_wcB"
+            >
+              about mental health in detail</a
+            >
+          </div>
+          <div class="container_img">
+            <img
+              class="img1"
+              src="../../img/mental_health.jpeg"
+              alt="mental health"
+            />
+            <img
+              class="img2"
+              src="../../img/mental_health_statistics.png"
+              alt="mental health"
+            />
+            <img class="img3" src="../../img/fear.png" alt="mental health" />
+            <img
+              class="img4"
+              src="../../img/mental_wordcloud.jpeg"
+              alt="mental health"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="services">
+        <h2>services</h2>
+        <div class="cards_services">
+          <div class="card_1">
+            <h3>Simple Ui</h3>
+            <p>An easy to use, understand and organized page</p>
+          </div>
+          <div class="card_2">
+            <h3>Choose your problem</h3>
+            <p>
+              The ability to choose the problem you are suffering from and find
+              solutions for it
+            </p>
+          </div>
+          <div class="card_3">
+            <h3>Comment Section</h3>
+            <p>
+              Benefit from the problems and solutions of others by checking the
+              comments section
+            </p>
+          </div>
+          <div class="card_4">
+            <h3>Many sources</h3>
+            <p>More detailed sources on problems and topics</p>
+          </div>
+          <div class="card_5">
+            <h3>To-Do-List</h3>
+            <p>
+              Having a to-do list to write down your daily tasks during the
+              treatment phase
+            </p>
+          </div>
+          <div class="card_6">
+            <h3>updating</h3>
+            <p>
+              Constant updating and development of the site and solving all
+              problems that customers will face
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="Option">
+        <div class="contianrt_select">
+          <h2>Choose your problem</h2>
+          <div class="container">
+            <h1>Support Solutions</h1>
+            <select id="issue-select" onchange="displaySolution()">
+              <option value="">Select an issue</option>
+              <option value="depression">Depression</option>
+              <option value="stress">Stress</option>
+              <option value="bullying">Bullying</option>
+            </select>
+            <div id="solution" class="solution"></div>
+          </div>
+        </div>
+      </section>
+      <section id="Comment">
+        <div class="container_comment">
+          <div class="container_1">
+            <h1>Comment Section</h1>
+            <div id="comment-form">
+              <textarea
+                id="comment-body"
+                placeholder="Enter your comment..."
+                rows="4"
+                required
+              ></textarea>
+              <button id="comment-submit">Submit</button>
+            </div>
+            <div id="comments" class="comments-section"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../utils.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
