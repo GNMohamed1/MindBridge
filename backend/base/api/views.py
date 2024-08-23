@@ -2,7 +2,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-from .serializers import CommentSerializer
+from rest_framework_simplejwt.tokens import RefreshToken
+from .serializers import CommentSerializer, UserSerializer
 from base.models import Comment
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -42,4 +43,18 @@ def addComment(request):
             serializer.save(user=request.user)
             return Response(serializer.data, status=201)
         return Response(serializer.errors, status=400)
-    return Response({"detail": "Authentication credentials were not provied"}, status=401)
+    return Response({"detail": "Authentication credentials were not provide"}, status=401)
+
+@api_view(['POST'])
+def register(request):
+    serializer = UserSerializer(data=request.data)
+    if serializer.is_valid():
+        user = serializer.save()
+        refresh = RefreshToken.for_user(user)
+        return Response({
+            'refresh': str(refresh),
+            'access': str(refresh.access_token),
+            'username': user.username,
+        }, status=201)
+        
+    return Response(serializer.errors, status=401) 
